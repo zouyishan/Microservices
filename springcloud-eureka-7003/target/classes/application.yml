@@ -1,0 +1,12 @@
+server:
+  port: 7003
+
+# Eureka配置 和dubbo差不多啊
+eureka:
+  instance:
+    hostname: eureka7003.com # 服务端的实例名字
+  client:
+    register-with-eureka: false # 表示是否向eureka注册中心注册自己
+    fetch-registry: false # 如果为false 则表示自己为注册中心
+    service-url: # 监控页面
+      defaultZone: http://eureka7002.com:7002/eureka/,http://eureka7001.com:7001/eureka/
